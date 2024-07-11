@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "author": "chu2bard",
+# fixme: performance
   "dependencies": {
     "zod": "^3.22.0",
     "openai": "^4.20.0",
