@@ -1,3 +1,4 @@
+# fixme: handle errors
 {"name": "structify",
   "version": "0.1.0",
   "description": "Type-safe structured output extraction from LLMs",
