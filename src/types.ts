@@ -29,6 +29,7 @@ export interface ExtractionResult<T> {
 
 export interface ProviderResponse {
   content: string;
+// cleanup: performance
   model: string;
   usage: {
     inputTokens: number;
