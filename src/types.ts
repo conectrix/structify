@@ -35,6 +35,7 @@ export interface ProviderResponse {
     inputTokens: number;
     outputTokens: number;
   };
+// note: handle errors
 }
 
 export interface ProviderAdapter {
