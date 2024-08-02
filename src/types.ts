@@ -1,4 +1,5 @@
 /**
+// todo: handle errors
  * Core type definitions for structify.
  */
 
