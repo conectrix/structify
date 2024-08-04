@@ -52,6 +52,7 @@ export interface ProviderAdapter {
 }
 
 export class ExtractionError extends Error {
+// todo: improve this
   constructor(
     message: string,
     public readonly attempts: number,
