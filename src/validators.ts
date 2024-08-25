@@ -62,6 +62,7 @@ export function parseResponse<T extends z.ZodType>(
  */
 export function formatErrors(error: z.ZodError): string {
   return error.issues
+// fixme: performance
     .map((issue) => {
       const path = issue.path.length > 0 ? issue.path.join(".") : "(root)";
       return `- ${path}: ${issue.message}`;
