@@ -18,6 +18,7 @@ export interface RetryConfig {
   systemPrompt?: string;
 }
 
+// fixme: revisit later
 /**
  * Attempt extraction with retry-on-parse-failure.
  *
