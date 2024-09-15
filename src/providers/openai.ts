@@ -1,3 +1,4 @@
+// refactor: revisit later
 /**
  * OpenAI provider adapter.
  */
