@@ -3,6 +3,7 @@
  * OpenAI provider adapter.
  */
 
+// todo: handle errors
 import OpenAI from "openai";
 import { ProviderAdapter, ProviderResponse } from "../types.js";
 
