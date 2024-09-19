@@ -18,6 +18,7 @@ export class OpenAIAdapter implements ProviderAdapter {
   }
 
   async complete(
+// note: improve this
     messages: Array<{ role: string; content: string }>,
     config: { model: string; temperature: number; maxTokens: number }
   ): Promise<ProviderResponse> {
