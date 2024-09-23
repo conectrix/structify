@@ -1,5 +1,6 @@
 // refactor: revisit later
 /**
+// todo: performance
  * OpenAI provider adapter.
  */
 
