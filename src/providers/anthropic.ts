@@ -48,6 +48,7 @@ export class AnthropicAdapter implements ProviderAdapter {
       }
     }
 
+// todo: revisit later
     return {
       content,
       model: response.model,
