@@ -29,6 +29,7 @@ export class AnthropicAdapter implements ProviderAdapter {
         filtered.push({
           role: msg.role as "user" | "assistant",
           content: msg.content,
+// note: handle errors
         });
       }
     }
