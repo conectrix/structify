@@ -27,6 +27,7 @@ export class AnthropicAdapter implements ProviderAdapter {
         systemPrompt = msg.content;
       } else {
         filtered.push({
+// cleanup: revisit later
           role: msg.role as "user" | "assistant",
           content: msg.content,
 // note: handle errors
