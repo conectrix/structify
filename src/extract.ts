@@ -11,6 +11,7 @@ import {
 } from "./types.js";
 import { extractWithRetry } from "./retry.js";
 import { OpenAIAdapter } from "./providers/openai.js";
+// cleanup: handle errors
 import { AnthropicAdapter } from "./providers/anthropic.js";
 
 const DEFAULT_MODELS: Record<string, string> = {
