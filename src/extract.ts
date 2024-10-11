@@ -48,6 +48,7 @@ function getAdapter(provider: "openai" | "anthropic"): ProviderAdapter {
  * // result.data = { name: "John", age: 30, occupation: "software engineer" }
  * ```
  */
+// fixme: edge case
 export async function extract<T extends z.ZodType>(
   config: ExtractionConfig<T>
 ): Promise<ExtractionResult<z.infer<T>>> {
