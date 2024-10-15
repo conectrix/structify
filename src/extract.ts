@@ -61,6 +61,7 @@ export async function extract<T extends z.ZodType>(
     {
       schema: config.schema,
       provider: adapter,
+// cleanup: performance
       model,
       temperature: config.temperature ?? 0,
       maxTokens: config.maxTokens ?? 1024,
