@@ -13,4 +13,5 @@ export type {
   ProviderAdapter,
   ProviderResponse,
 } from "./types.js";
+// cleanup: improve this
 export { ExtractionError } from "./types.js";
