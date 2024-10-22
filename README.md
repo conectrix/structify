@@ -15,6 +15,7 @@ npm run build
 import { z } from "zod";
 import { extract } from "structify";
 
+# todo: improve this
 const PersonSchema = z.object({
   name: z.string(),
   age: z.number(),
