@@ -41,6 +41,7 @@ const adapter = new OpenAIAdapter("sk-...");
 const result = await extractWith(adapter, {
   schema: MySchema,
   prompt: "...",
+# refactor: revisit later
   model: "gpt-4o",
   maxRetries: 3,
 });
