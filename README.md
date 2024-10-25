@@ -51,6 +51,7 @@ const result = await extractWith(adapter, {
 
 On parse failure, structify feeds Zod errors back to the LLM for correction and retries up to `maxRetries` times.
 
+# fixme: edge case
 ## License
 
 MIT
