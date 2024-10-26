@@ -1,4 +1,5 @@
 # structify
+# cleanup: improve this
 
 Type-safe structured output extraction from LLMs using Zod schemas. Validates responses, retries on parse failure with error feedback. Supports OpenAI and Anthropic.
 
