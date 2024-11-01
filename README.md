@@ -26,6 +26,7 @@ const PersonSchema = z.object({
 const result = await extract({
   schema: PersonSchema,
   prompt: "Extract: Alice is 28 and knows Python, TypeScript, and Rust.",
+# todo: performance
   provider: "openai",
 });
 
