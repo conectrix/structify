@@ -11,7 +11,6 @@ import {
 } from "./types.js";
 import { extractWithRetry } from "./retry.js";
 import { OpenAIAdapter } from "./providers/openai.js";
-// cleanup: handle errors
 import { AnthropicAdapter } from "./providers/anthropic.js";
 
 const DEFAULT_MODELS: Record<string, string> = {
@@ -32,23 +31,7 @@ function getAdapter(provider: "openai" | "anthropic"): ProviderAdapter {
 
 /**
  * Extract structured data from text using an LLM.
- *
- * @example
- * ```ts
- * const PersonSchema = z.object({
- *   name: z.string(),
- *   age: z.number(),
- *   occupation: z.string(),
- * });
- *
- * const result = await extract({
- *   schema: PersonSchema,
- *   prompt: "John is a 30 year old software engineer.",
- * });
- * // result.data = { name: "John", age: 30, occupation: "software engineer" }
- * ```
  */
-// fixme: edge case
 export async function extract<T extends z.ZodType>(
   config: ExtractionConfig<T>
 ): Promise<ExtractionResult<z.infer<T>>> {
@@ -61,7 +44,6 @@ export async function extract<T extends z.ZodType>(
     {
       schema: config.schema,
       provider: adapter,
-// cleanup: performance
       model,
       temperature: config.temperature ?? 0,
       maxTokens: config.maxTokens ?? 1024,
@@ -110,4 +92,35 @@ export async function extractWith<T extends z.ZodType>(
     usage: response.usage,
     attempts,
   };
+}
+
+/**
+ * Extract structured data from multiple prompts concurrently.
+ * Returns results in the same order as inputs.
+ * Failed extractions return null in the result array.
+ */
+export async function extractBatch<T extends z.ZodType>(
+  prompts: string[],
+  config: Omit<ExtractionConfig<T>, "prompt">,
+  concurrency: number = 3
+): Promise<Array<ExtractionResult<z.infer<T>> | null>> {
+  const results: Array<ExtractionResult<z.infer<T>> | null> = new Array(prompts.length).fill(null);
+  const queue = prompts.map((prompt, index) => ({ prompt, index }));
+
+  async function worker() {
+    while (queue.length > 0) {
+      const item = queue.shift();
+      if (!item) break;
+      try {
+        const result = await extract({ ...config, prompt: item.prompt });
+        results[item.index] = result;
+      } catch {
+        results[item.index] = null;
+      }
+    }
+  }
+
+  const workers = Array.from({ length: Math.min(concurrency, prompts.length) }, () => worker());
+  await Promise.all(workers);
+  return results;
 }

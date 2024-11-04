@@ -2,7 +2,7 @@
  * structify - Type-safe structured output extraction from LLMs.
  */
 
-export { extract, extractWith } from "./extract.js";
+export { extract, extractWith, extractBatch } from "./extract.js";
 export { OpenAIAdapter } from "./providers/openai.js";
 export { AnthropicAdapter } from "./providers/anthropic.js";
 export { schemaToPrompt, zodToJsonSchema } from "./schema.js";
@@ -13,5 +13,4 @@ export type {
   ProviderAdapter,
   ProviderResponse,
 } from "./types.js";
-// cleanup: improve this
 export { ExtractionError } from "./types.js";
