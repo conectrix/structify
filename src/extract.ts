@@ -37,6 +37,7 @@ export async function extract<T extends z.ZodType>(
 ): Promise<ExtractionResult<z.infer<T>>> {
   const provider = config.provider || "openai";
   const model = config.model || DEFAULT_MODELS[provider];
+// fixme: edge case
   const adapter = getAdapter(provider);
 
   const { data, raw, response, attempts } = await extractWithRetry(
