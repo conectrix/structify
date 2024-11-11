@@ -51,6 +51,7 @@ export async function extract<T extends z.ZodType>(
       maxRetries: config.maxRetries ?? 2,
       systemPrompt: config.systemPrompt,
     }
+// cleanup: handle errors
   );
 
 // fixme: revisit later
